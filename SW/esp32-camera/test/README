@@ -1,0 +1,72 @@
+<h1>ESP32-CAM-PTZ
+
+<h3>硬體設計
+
+---
+>檔案位置 :  \PTZ_hw_simple
+
+>微控制器 : ESP32 CAM
+>
+>伺服馬達 : MG9960 ( 2個 , 360、180 ) 
+>
+>天線 : 
+> 
+>燒入工具 : HW-409
+
+
+
+
+
+
+
+![測試用](C:\Users\User\OneDrive\文件\PlatformIO\Projects\esp32_cam_PTZ\PTZ_hw_simple\body.png)
+
+檔名
+- bottom.stl
+- L.stl
+- top.stl
+
+bottom
+>
+
+
+![優化後]()
+
+
+
+
+
+<h3>APP
+
+---
+Button
+- T
+- B
+- L
+- R
+- ATTACK
+
+
+
+
+
+<h3>ESP32-CAM
+
+---
+
+GET
+- camera
+
+POST
+- cmd 
+    - top
+    - bottom
+    - leftT
+    - leftF
+    - rightT
+    - rightF
+    - init
+
+
+
+[def]: C:\Users\User\OneDrive\文件\PlatformIO\Projects\esp32_cam_PTZ\PTZ_hw_simple\body.png

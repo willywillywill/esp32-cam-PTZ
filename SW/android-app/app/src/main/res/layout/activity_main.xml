@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context=".MainActivity"
+    tools:visibility="visible">
+
+    <ImageView
+        android:id="@+id/camera_view"
+        android:layout_width="828dp"
+        android:layout_height="415dp"
+        android:rotation="180"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="805dp"
+        android:layout_height="394dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Space
+            android:layout_width="96dp"
+            android:layout_height="191dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="215dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="147dp" />
+
+            <TableLayout
+                android:layout_width="217dp"
+                android:layout_height="231dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/top"
+                        android:layout_width="match_parent"
+                        android:layout_height="61dp"
+                        android:text="T" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/left"
+                        android:layout_width="62dp"
+                        android:layout_height="102dp"
+                        android:text="L" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/right"
+                        android:layout_width="60dp"
+                        android:layout_height="104dp"
+                        android:text="R" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="69dp">
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/bottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="66dp"
+                        android:text="B" />
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+
+        <Space
+            android:layout_width="340dp"
+            android:layout_height="171dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="192dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="167dp" />
+
+            <TextView
+                android:id="@+id/text_1"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="TextView"
+                android:textSize="40dp" />
+
+            <Button
+                android:id="@+id/attack"
+                android:layout_width="wrap_content"
+                android:layout_height="87dp"
+                android:drawableBottom="@color/white"
+                android:text="attack"
+                app:cornerRadius="360dip" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
