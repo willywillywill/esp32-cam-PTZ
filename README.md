@@ -6,8 +6,6 @@ esp32-camera-PTZ-V1
 
 ## - ***CONTENT*** -
 
-<br/>
-
 ## [HW （hardward）](#hw)
 - 材料
 - 建摩
@@ -18,9 +16,9 @@ esp32-camera-PTZ-V1
 - esp32-cam
 - android
 
-<br/>
 
-##  [！！使用說明](#使用說明)
+
+##  [！使用](#使用說明)
 
 <br/>
 
@@ -42,7 +40,7 @@ esp32-camera-PTZ-V1
 
 #### ` body.png ` 為下面這張圖片
 
-![圖片](HW\body.png "img")
+<img src="HW\body.png"> 
 
 > 以上圖為例
 
@@ -95,8 +93,8 @@ lib_deps =
 首先在輸出影像的部分，主要是在 `camera_handler` 內，再來因為我是 `esp_https_server` 這個庫，所以在輸出和接收資料方面相對於其他庫會麻煩點。
 
 > #### esp_https_server
->
-> 是 esp32idef 的
+> 相關資料 : https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/get-started/index.html
+
 
 再來是接收控制，代碼主要是在 ` cmd_handler ` 中，在這串代碼中最重要的是這串吧，
 
@@ -179,8 +177,10 @@ r = requests.get("http://192.168.1.160/cmd?val=rightT")
 - 也是一樣接收和輸出資料# esp32-cam-PTZ
 "# esp32-cam-PTZ"
 
+---
 
 # - ***使用說明*** -
+
 
 -  連上 WiFi ，名字 `ESP-PTZ-1`，沒有密碼
 -  如果要用 ` \SW\esp32-camera\test\http_test.py ` 傳送控制訊息，那後面的 `val` 只有以下幾種
