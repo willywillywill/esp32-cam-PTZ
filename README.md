@@ -31,8 +31,9 @@ esp32-camera-PTZ-V1
 - [ ] esp32-cam
 - [ ] Mg996r 180°
 - [ ] Mg996r 360°
-- [ ] HCSR04
+- [ ] CP2102
 - [ ] ANT （非必要）
+- [ ] M3 螺絲
 
 > ### 建模
 >
@@ -55,9 +56,9 @@ esp32-camera-PTZ-V1
 | ESP32-CAM | To |object
 | :--:  | :--: | :--:
 | GPIO 12 | S （bottom）| servo-motor
-| GPIO 4 | S （top）| servo-motor
-| GPIO  | TX | HCSR04
-| GPIO  | RX | HCSR04
+| GPIO 13 | S （top）| servo-motor
+| GPIO 3  | TX | CP2102
+| GPIO 1  | RX | CP2102
 
 ---
 
@@ -183,6 +184,8 @@ r = requests.get("http://192.168.1.160/cmd?val=rightT")
 
 
 -  連上 WiFi ，名字 `ESP-PTZ-1`，沒有密碼
+- APP 使用的時不要太激動，有 Bug 出現的時候後 APP 重開就好了，如果不行 PTZ 重開
+- 相機網址 http://192.168.1.160/camera
 -  如果要用 ` \SW\esp32-camera\test\http_test.py ` 傳送控制訊息，那後面的 `val` 只有以下幾種
     
     | 模式 | 右 | 左 | 上 | 下
@@ -198,6 +201,4 @@ r = requests.get("http://192.168.1.160/cmd?val=rightT")
       //  控制
     }
     ```
-
-- APP 使用的時不要太激動，有 Bug 出現的時候後 APP 重開就好了，如果不行 PTZ 重開
 
