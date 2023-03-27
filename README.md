@@ -89,7 +89,7 @@ lib_deps =
 
 - 檔案在 `SW/esp32-cam/src/main.cpp`
 
-## 1. 基本上就是設計一個接收控制和輸出影像的程式
+## 接收控制和輸出影像的程式
 
 首先在輸出影像的部分，主要是在 `camera_handler` 內，再來因為我是 `esp_https_server` 這個庫，所以在輸出和接收資料方面相對於其他庫會麻煩點。
 
@@ -135,6 +135,11 @@ lib_deps =
         horizontal_servo.write(servo_stop_W);
     }
 ```  
+相機 `camera_handler` 我看了
+> https://github.com/espressif/esp32-camera             
+> ## 我覺得下面這個很讚，幫我解決了很多問題     
+> ### https://randomnerdtutorials.com/esp32-cam-pan-and-tilt-2-axis/
+>
 
 就是上下左右的判斷，可是又有分為長按和點擊，如果是用 `android-app.apk` 是沒有長按功能的下章有說，可是用 ` test/http_test.py ` 是可以的只要把後面網址的 <font color="orange">rightT</font> 改掉就好了
 
@@ -144,32 +149,7 @@ lib_deps =
 r = requests.get("http://192.168.1.160/cmd?val=rightT")
 ```
 
-## 2. `main.cpp` 中的 定義（變數 & define ...）及 初始化
 
-### i. 定義
-
-- 伺服馬達
-  - 腳位
-  - 移動參數
-  - 紀錄角度
-
-- 相機
-  - 腳位
-    > 詳細說明
-    >> <https://github.com/espressif/esp32-camera>
-
-- 網路
-  - AP
-  - /camera
-  - /cmd
-    > 了解更多
-    >> <https://ithelp.ithome.com.tw/articles/10298661?sc=iThelpR>
-    >> <https://www.lab-z.com/esp32psr/>  
-    >> <https://stackoverflow.com/questions/3508338/what-is-the-boundary-in-multipart-form-data>
-
-### ii. 初始化
-
- 在 `setup`、`startCameraServer` 中是出初始化的程式
 
 > # ***android***
 
